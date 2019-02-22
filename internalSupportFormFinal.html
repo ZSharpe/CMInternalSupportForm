@@ -42,14 +42,20 @@
             <!-- Description Field -->
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea name="description" class="form-control" style="height:220px">Please insert any information that applies:
-- Who should we follow up with (requester or customer)?: 
-- Username or Followup Email Address: 
-- Requester Name: 
-- Your Department: 
-- Description of Issue: 
-- Sub Account ID (where applicable):</textarea>
+                <textarea name="description" id="description" class="form-control" style="height:220px"></textarea>
             </div>
+
+            <!-- <script>
+                var recordType = document.querySelector("#recordType");
+
+                if(document.querySelector("#recordType").value === "Campaign Monitor"){
+                    document.querySelectorAll("#description").value = "\n- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address: \n- Global ID or Hex Link:\n- Your Name & Email address: \n- Your Department: \n- Description of Issue:"
+                }else if(document.querySelector("#recordType").value === "Emma"){
+                    document.querySelectorAll("#description").value = "\n- Who should we follow up with (you or the customer)?: \n- Username or Followup Email Address: \n\\n- Your Department: \n- Description of Issue: \n- Sub Account ID (where applicable):"
+                }else{
+                    document.querySelectorAll("#description").value = "";
+                }
+            </script> -->
 
             <!-- Pass subject line value of "Internal Support Form Submission" -->
             <input type ="hidden" id="subject" maxlength="80" name="subject" size="20" type="text" value="Internal Support Form Submission"/>
@@ -63,9 +69,12 @@
         
     </form>
     
-    <!-- Bootstrap JS inclusion -->
+    <!-- Bootstrap JS Inclusion -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Custom JS Inclusion -->
+    <script src="internalSupportForm.js"></script>
 </body>
 </html>
