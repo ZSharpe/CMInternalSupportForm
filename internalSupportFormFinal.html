@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html" charset="UTF-8">
+    <title>Campaign Monitor Internal Support Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+    <!-- Bootstrap CSS Inclusion -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<h1 class="container" style="margin-bottom: 10px; align-content:center; font-style: roboto, helvetica">Campaign Monitor Internal Support Form</h1>
+
+<hr class="hr">
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="container">
+        <div class="form-group">
+
+            <input type=hidden name="orgid" value="00Do0000000eE9F" class="form-control">
+            <input type=hidden name="retURL" value="http://myemma.com">
+            
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail"                                  -->
+            <!--  value="nmiller@campaignmonitor.com">                                    -->
+            <!--  ----------------------------------------------------------------------  -->
+            
+
+            <!-- Choose which product to receive support for -->
+            <label for="recordType">What Product?</label>
+            <select  id="recordType" name="recordType" class="form-control">
+                <option value="">--None--</option>
+                <option value="012o00000016Bio">Campaign Monitor</option>
+                <option value="0121J000000yZ1A">Emma</option>
+            </select>
+            <br>
+
+            <!-- Description Field -->
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description" class="form-control" style="height:220px">Please insert any information that applies:
+- Who should we follow up with (requester or customer)?: 
+- Username or Followup Email Address: 
+- Requester Name: 
+- Your Department: 
+- Description of Issue: 
+- Sub Account ID (where applicable):</textarea>
+            </div>
+
+            <!-- Pass subject line value of "Internal Support Form Submission" -->
+            <input type ="hidden" id="subject" maxlength="80" name="subject" size="20" type="text" value="Internal Support Form Submission"/>
+            <br>
+
+            <input type="hidden"  id="external" name="external" value="1" /><br>
+            
+            <!-- Submit button -->
+            <input type="submit" name="submit" class="btn btn-primary" style="background-color:#509DF5">
+        </div>
+        
+    </form>
+    
+    <!-- Bootstrap JS inclusion -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
