@@ -28,34 +28,36 @@
             <!--  <input type="hidden" name="debugEmail"                                  -->
             <!--  value="nmiller@campaignmonitor.com">                                    -->
             <!--  ----------------------------------------------------------------------  -->
-            
 
             <!-- Choose which product to receive support for -->
-            <label for="recordType">What Product?</label>
-            <select  id="recordType" name="recordType" class="form-control">
-                <option value="">--None--</option>
-                <option value="012o00000016Bio">Campaign Monitor</option>
-                <option value="0121J000000yZ1A">Emma</option>
-            </select>
-            <br>
+            <div class="container">
+                <label for="recordType">What Product?</label>
+                <select  id="recordType" name="recordType" class="form-control">
+                    <option value="">--None--</option>
+                    <option value="012o00000016Bio">Campaign Monitor</option>
+                    <option value="0121J000000yZ1A">Emma</option>
+                </select>
+                <br>
+            </div>
 
             <!-- Description Field -->
-            <div class="form-group">
+            <div class="form-group container">
                 <label for="description">Description</label>
                 <textarea name="description" id="description" class="form-control" style="height:220px"></textarea>
             </div>
 
-            <!-- <script>
-                var recordType = document.querySelector("#recordType");
+            <div class="container" id="resources">
+                <p>Please be sure to check the following resources before submitting your issue:</p>
+                <ul class="list-group">
+                    <li class="list-group-item" id="list1">
+                        <a href="https://app.getguru.com/dashboard">Guru</a>
+                    </li>
 
-                if(document.querySelector("#recordType").value === "Campaign Monitor"){
-                    document.querySelectorAll("#description").value = "\n- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address: \n- Global ID or Hex Link:\n- Your Name & Email address: \n- Your Department: \n- Description of Issue:"
-                }else if(document.querySelector("#recordType").value === "Emma"){
-                    document.querySelectorAll("#description").value = "\n- Who should we follow up with (you or the customer)?: \n- Username or Followup Email Address: \n\\n- Your Department: \n- Description of Issue: \n- Sub Account ID (where applicable):"
-                }else{
-                    document.querySelectorAll("#description").value = "";
-                }
-            </script> -->
+                    <li class="list-group-item" id="list2">
+                        <a href="https://support.e2ma.net/Resource_Center">Resource Center</a>
+                    </li>
+                </ul>
+            </div>
 
             <!-- Pass subject line value of "Internal Support Form Submission" -->
             <input type ="hidden" id="subject" maxlength="80" name="subject" size="20" type="text" value="Internal Support Form Submission"/>
