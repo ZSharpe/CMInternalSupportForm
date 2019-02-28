@@ -4,7 +4,6 @@
     <META HTTP-EQUIV="Content-type" CONTENT="text/html" charset="UTF-8">
     <title>Campaign Monitor Internal Support Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 
     <!-- Bootstrap CSS Inclusion -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -43,18 +42,18 @@
             <!-- Description Field -->
             <div class="form-group container">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" class="form-control" style="height:220px"></textarea>
+                <textarea name="description" id="description" class="form-control" style="height:220px; resize:none"></textarea>
             </div>
 
             <div class="container" id="resources">
-                <p>Please be sure to check the following resources before submitting your issue:</p>
+                <p id="checkResources">Please be sure to check the following resources before submitting your issue:</p>
                 <ul class="list-group">
                     <li class="list-group-item" id="list1">
-                        <a href="https://app.getguru.com/dashboard">Guru</a>
+                        <a id="guru" href="https://app.getguru.com/dashboard">Guru</a>
                     </li>
 
                     <li class="list-group-item" id="list2">
-                        <a href="https://support.e2ma.net/Resource_Center">Resource Center</a>
+                        <a id="rc" href="https://support.e2ma.net/Resource_Center">Resource Center</a>
                     </li>
                 </ul>
             </div>
