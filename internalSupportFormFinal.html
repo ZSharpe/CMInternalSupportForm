@@ -1,3 +1,4 @@
+<!-- Z.S. 3/1/19 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
         <div class="form-group">
 
             <input type=hidden name="orgid" value="00Do0000000eE9F" class="form-control">
-            <input type=hidden name="retURL" value="http://myemma.com">
+            <input type=hidden name="retURL" id="redirect" value="https://myemma.com">
             
             <!--  ----------------------------------------------------------------------  -->
             <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -46,7 +47,9 @@
             </div>
 
             <!-- List area for resource links before submission button. -->
-            <div class="container" id="resources">
+            <!-- TO DO: Enable after rollout of Guru for CM teams -->
+
+            <!-- <div class="container" id="resources">
                 <p id="checkResources">Please be sure to check the following resources before submitting your issue:</p>
                 <ul class="list-group">
                     <li class="list-group-item" id="list1">
@@ -57,7 +60,7 @@
                         <a id="rc" href="https://support.e2ma.net/Resource_Center">Resource Center</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
             <!-- Pass subject line value of "Internal Support Form Submission" -->
             <input type ="hidden" id="subject" maxlength="80" name="subject" size="20" type="text" value="Internal Support Form Submission"/>
