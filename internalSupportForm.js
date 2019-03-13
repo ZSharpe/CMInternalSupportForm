@@ -31,6 +31,7 @@ $('#recordType').change(function() {
         $("#submit").css("background-color", "#7956FF");
 
         // Update href of "resource center" link to Campaign Monitor resources.
+        document.querySelector("#rc").innerText = "Help Center";
         rc.setAttribute("href", "https://help.campaignmonitor.com/")
 
         // Update description field with CM relevant questions
@@ -40,6 +41,7 @@ $('#recordType').change(function() {
     }else if(option.value === "0121J000000yZ1A"){
         // TO DO: Enable after rollout of Guru for CM teams
         checkResources.textContent = "Please be sure to check the following resources before submitting your issue:";
+
         // Show resource link list
         listItemsAll.show();
 
@@ -51,7 +53,8 @@ $('#recordType').change(function() {
         $("#submit").css("background-color", "#509DF5");
 
         // Update href of "resource center" link to Emma resources.
-        rc.setAttribute("href", "https://support.e2ma.net/Resource_Center")
+        document.querySelector("#rc").innerText = "Support Hub";
+        rc.setAttribute("href", "https://support.e2ma.net/")
         
         // Update description field with Emma relevant questions
         description.value = "- Who should we follow up with (you or the customer)?: \n- Username or Followup Email Address: \n- Your Department: \n- Description of Issue: \n- Sub Account ID (where applicable):";

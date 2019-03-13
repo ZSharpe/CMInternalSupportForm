@@ -15,6 +15,7 @@
 
 <hr class="hr">
 
+<!-- Begin Form -->
     <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="container">
         <div class="form-group">
 
@@ -40,6 +41,13 @@
                 <br>
             </div>
 
+            <!-- Account Id field -->
+            <div class="form-group container">
+                <label for="accountId">Account ID</label>
+                <br>
+                <input  id="00N1J00000GD7wX" class="form-control" maxlength="25" name="00N1J00000GD7wX" size="20" type="text"/>
+            </div>
+
             <!-- Description Field -->
             <div class="form-group container">
                 <label for="description">Description</label>
@@ -49,7 +57,7 @@
             <!-- List area for resource links before submission button. -->
 
             <div class="container" id="resources">
-                <p id="checkResources">Please be sure to check the following resources before submitting your issue:</p>
+                <p id="checkResources">Please be sure to check the following resources before submitting your issue</p>
                 <ul class="list-group">
                     <li class="list-group-item" id="list1">
                         <a id="guru" href="https://app.getguru.com/dashboard">Guru</a>
@@ -72,6 +80,7 @@
         </div>
         
     </form>
+    <!-- End Form -->
     
     <!-- Bootstrap JS Inclusion -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
