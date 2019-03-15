@@ -1,4 +1,4 @@
-// Z.S. 3/1/19
+// Z.S. 3/13/19
 // Selector variables declared for record type selected, description content area, resource content area, and list elements.
 
 var option = $("#recordType option:selected");
@@ -6,7 +6,6 @@ var description = $("#description")[0];
 var checkResources = $("#checkResources")[0];
 var resources = $("#resources");
 var listItemsAll = $("li");
-// var rc = $("#rc")[0];
 var redirect = $("#redirect")[0];
 
 listItemsAll.hide();
@@ -35,7 +34,7 @@ $('#recordType').change(function() {
         rc.setAttribute("href", "https://help.campaignmonitor.com/")
 
         // Update description field with CM relevant questions
-        description.value = "- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address: \n- Global ID or Hex Link:\n- Your Name & Email address: \n- Your Department: \n- Description of Issue:";
+        description.value = "- Requester Name: \n- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address: \n- Global ID or Hex Link:\n- Your Name & Email address: \n- Your Department: \n- Description of Issue:";
 
     // If Emma is selected in recordType, change description and alter resource link 2.
     }else if(option.value === "0121J000000yZ1A"){
@@ -57,7 +56,7 @@ $('#recordType').change(function() {
         rc.setAttribute("href", "https://support.e2ma.net/")
         
         // Update description field with Emma relevant questions
-        description.value = "- Who should we follow up with (you or the customer)?: \n- Username or Followup Email Address: \n- Your Department: \n- Description of Issue: \n- Sub Account ID (where applicable):";
+        description.value = "- Requester Name: \n- Who should we follow up with (you or the customer)?: \n- Username or Followup Email Address: \n- Your Department: \n- Description of Issue: \n- Sub Account ID (where applicable):";
         
     // If nothing is selected or "--None--", hide resource list and empty description field.
     }else{
