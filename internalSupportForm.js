@@ -34,7 +34,7 @@ $('#recordType').change(function() {
         rc.setAttribute("href", "https://help.campaignmonitor.com/")
 
         // Update description field with CM relevant questions
-        description.value = "- Requester Name: \n- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address: \n- Global ID or Hex Link:\n- Your Name & Email address: \n- Your Department: \n- Description of Issue:";
+        description.value = "- Requester Name: \n- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address: \n- Global ID or Hex Link:\n- Your Department: \n- Description of Issue:";
 
     // If Emma is selected in recordType, change description and alter resource link 2.
     }else if(option.value === "0121J000000yZ1A"){
