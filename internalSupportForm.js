@@ -14,7 +14,11 @@ $("#submit").prop("disabled", true);
 
 function getRequester(){
     var email = $("#SuppliedEmail").value;
-    console.log(email);
+    alert(email);
+}
+
+function productReset(){
+    option.value = "--None--";
 }
 
 // Record Type change selection event listener to alter links and description area based on selection.
@@ -32,14 +36,13 @@ $('#recordType').change(function() {
 
         // Enable submit button, change background color of submit button to reflect Campaign Monitor coloring
         $("#submit").prop("disabled", false);
-        $("#submit").css("background-color", "#7956FF");
 
         // Update href of "resource center" link to Campaign Monitor resources.
         document.querySelector("#rc").innerText = "Help Center";
         rc.setAttribute("href", "https://help.campaignmonitor.com/")
 
         // Update description field with CM relevant questions
-        description.value = "- Who should we follow up with (you or the customer)?: \n- Customer Name & Email Address:\n- Your Department: \n- Description of Issue:";
+        description.value = "- Who should we follow up with (you or the customer): \n- Customer Name\n- Customer Email Address:\n- Your Department: \n- Description of Issue:";
 
     // If Emma is selected in recordType, change description and alter resource link 2.
     }else if(option.value === "0121J000000yZ1A"){
@@ -54,14 +57,13 @@ $('#recordType').change(function() {
 
         // Enable submit button, change background color of submit button to reflect Campaign Monitor coloring
         $("#submit").prop("disabled", false);
-        $("#submit").css("background-color", "#509DF5");
 
         // Update href of "resource center" link to Emma resources.
         document.querySelector("#rc").innerText = "Support Hub";
         rc.setAttribute("href", "https://support.e2ma.net/")
         
         // Update description field with Emma relevant questions
-        description.value = "- Who should we follow up with (you or the customer)?: \n- Your Department:\n- Username or Followup Email Address: \n- Sub Account ID (where applicable): \n- Description of Issue:";
+        description.value = "- Who should we follow up with (you or the customer): \n- Your Department:\n- Customer email address: \n- Sub Account ID (where applicable): \n- Description of Issue:";
         
     // If nothing is selected or "--None--", hide resource list and empty description field.
     }else{

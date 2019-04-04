@@ -1,7 +1,8 @@
-<!-- Z.S. 3/13/19 -->
+<!-- Z.S. 4/4/19 -->
 <!DOCTYPE html>
 <html>
 <head>
+
     <META HTTP-EQUIV="Content-type" CONTENT="text/html" charset="UTF-8">
     <title>Campaign Monitor Internal Support Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,16 +10,15 @@
     <!-- Bootstrap CSS Inclusion -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
 </head>
-<body>
 
-<h1 class="container" style="margin-bottom: 10px; align-content:center; font-family: roboto, helvetica">Campaign Monitor Internal Support Form</h1>
+<body onload="productReset()">
 
-<hr class="hr">
+    <h1 class="container" style="margin-bottom: 10px; align-content:center; font-family: roboto, helvetica">Campaign Monitor Internal Support Form</h1>
 
+    <hr class="hr">
 
-<!-- Begin Form -->
+    <!-- Begin Form -->
     <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="container">
         <div class="form-group">
 
@@ -46,17 +46,17 @@
 
              <!-- Requester Email Field -->
              <div class="container row">
-                <div class="form-group container col">
+                <div class="form-group col">
                     <label for="email">Requester Email *</label>
                     <br>
-                    <input  id="00N1J00000FHR5G" class="form-control" maxlength="80" name="00N1J00000FHR5G" size="20" type="text" required/>
+                    <input  id="00N1J00000FHR5G" class="form-control" maxlength="80" name="00N1J00000FHR5G" size="20" type="text" placeholder="example@campaignmonitor.com" required/>
                 </div>            
 
                 <!-- Account Id field -->
-                <div class="form-group container col">
+                <div class="form-group col">
                     <label for="accountId">Account / Global ID or Hex Link</label>
                     <br>
-                    <input id="00N1J00000GD7wX" class="form-control" maxlength="25" name="00N1J00000GD7wX" size="20" type="text" placeholder="Ex. 1111111"/>
+                    <input id="00N1J00000GD7wX" class="form-control" maxlength="25" name="00N1J00000GD7wX" size="20" type="text" placeholder="1111111"/>
                 </div>
             </div>
 
@@ -69,6 +69,7 @@
             <!-- List area for resource links before submission button. -->
             <div class="container" id="resources">
                 <p id="checkResources">Please be sure to check the following resources before submitting your issue</p>
+                
                 <ul class="list-group">
                     
                     <li class="list-group-item" id="list1">
@@ -78,6 +79,7 @@
                     <li class="list-group-item " id="list2">
                         <a id="rc" href="https://support.e2ma.net/Resource_Center">Resource Center</a>
                     </li>
+
                 </ul>
             </div>
 
@@ -87,8 +89,8 @@
 
             <input type="hidden"  id="external" name="external" value="1" /><br>
             
-            <!-- Submit button #7956FF-->
-            <input type="submit" name="submit" id="submit" class="container btn btn-primary" style="background-color:#FF644B">
+            <!-- Submit button-->
+            <input type="submit" name="submit" id="submit" class="container btn btn-primary" style="background-color:#FF644B; border-color: white">
         </div>
         
     </form>
