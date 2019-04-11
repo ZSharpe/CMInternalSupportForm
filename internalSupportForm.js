@@ -7,18 +7,27 @@ var checkResources = $("#checkResources")[0];
 var resources = $("#resources");
 var listItemsAll = $("li");
 var redirect = $("#redirect")[0];
+var submitButton = $("#submit")[0];
+var requester = $("#00N1J00000FHR5G")[0];
+var accountId = $("#00N1J00000GD7wX")[0];
 
 listItemsAll.hide();
 checkResources.textContent = "";
 $("#submit").prop("disabled", true);
 
-function getRequester(){
-    var email = $("#SuppliedEmail").value;
-    alert(email);
+function appendSubmitter(){
+    description.value = "\n" + description.value + "\n- Submitter: " + requester.value;
 }
 
 function productReset(){
     option.value = "--None--";
+}
+
+function checkAccountId(){
+
+    if(accountId.value === ""){
+        accountId.value = "NO ACCOUNT ID LISTED";
+    }
 }
 
 // Record Type change selection event listener to alter links and description area based on selection.
@@ -64,6 +73,7 @@ $('#recordType').change(function() {
         
         // Update description field with Emma relevant questions
         description.value = "- Who should we follow up with (you or the customer): \n- Your Department:\n- Customer email address: \n- Sub Account ID (where applicable): \n- Description of Issue:";
+        description.prepend("\n");
         
     // If nothing is selected or "--None--", hide resource list and empty description field.
     }else{

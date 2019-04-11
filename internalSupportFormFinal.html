@@ -24,14 +24,11 @@
 
             <input type=hidden name="orgid" value="00Do0000000eE9F" class="form-control">
             <input type=hidden name="retURL" id="redirect" value="https://myemma.com">
-            
-            <!--  ----------------------------------------------------------------------  -->
-            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-            <!--  these lines if you wish to test in debug mode.                          -->
-            <!--  <input type="hidden" name="debug" value=1>                              -->
-            <!--  <input type="hidden" name="debugEmail"                                  -->
-            <!--  value="nmiller@campaignmonitor.com">                                    -->
-            <!--  ----------------------------------------------------------------------  -->
+ 
+
+            <!-- SF Debugging inputs -->
+            <!-- <input type="hidden" name="debug" value=1> 
+            <input type="hidden" name="debugEmail" value="nmiller@campaignmonitor.com"> -->
 
             <!-- Choose which product to receive support for -->
             <div class="container">
@@ -49,7 +46,7 @@
                 <div class="form-group col">
                     <label for="email">Requester Email *</label>
                     <br>
-                    <input  id="00N1J00000FHR5G" class="form-control" maxlength="80" name="00N1J00000FHR5G" size="20" type="text" placeholder="example@campaignmonitor.com" required/>
+                    <input id="00N1J00000FHR5G" class="form-control" maxlength="80" name="00N1J00000FHR5G" size="20" type="text" placeholder="example@campaignmonitor.com" required/>
                 </div>            
 
                 <!-- Account Id field -->
@@ -69,7 +66,7 @@
             <!-- List area for resource links before submission button. -->
             <div class="container" id="resources">
                 <p id="checkResources">Please be sure to check the following resources before submitting your issue</p>
-                
+
                 <ul class="list-group">
                     
                     <li class="list-group-item" id="list1">
@@ -90,7 +87,7 @@
             <input type="hidden"  id="external" name="external" value="1" /><br>
             
             <!-- Submit button-->
-            <input type="submit" name="submit" id="submit" class="container btn btn-primary" style="background-color:#FF644B; border-color: white">
+            <input type="submit" name="submit" id="submit" class="container btn btn-primary" onclick = "appendSubmitter();checkAccountId()" style="background-color:#FF644B; border-color: white">
         </div>
         
     </form>
