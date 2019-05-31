@@ -10,6 +10,11 @@
     <!-- Bootstrap CSS Inclusion -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <style>
+        .form-control {
+        display: inline-block !important; }
+    </style>
+
 </head>
 
 <body onload="productReset()">
@@ -30,28 +35,45 @@
             <!-- <input type="hidden" name="debug" value=1> 
             <input type="hidden" name="debugEmail" value="nmiller@campaignmonitor.com"> -->
 
-            <!-- Choose which product to receive support for -->
-            <div class="container">
-                <label for="recordType">What Product? *</label>
-                <select  id="recordType" name="recordType" class="form-control">
-                    <option value="">--None--</option>
-                    <option value="012o00000016Bio">Campaign Monitor</option>
-                    <option value="0121J000000yZ1A">Emma</option>
-                </select>
-                <br>
+            <div class="container row" style="padding-bottom:20px">
+                <!-- Choose which product to receive support for -->
+                <div class="container col">
+                    <label for="recordType">What Product? *</label>
+                    <select  id="recordType" name="recordType" class="form-control">
+                        <option value="">--None--</option>
+                        <option value="012o00000016Bio">Campaign Monitor</option>
+                        <option value="0121J000000yZ1A">Emma</option>
+                    </select>
+                    <br>
+                </div>
+
+                <!-- Team Picker -->
+                <div class="container col">
+                    <label for="recordType">Your Team *</label>
+                    <select id="team" name="00N1J00000FKnXX" title="Emma Team" class="form-control">
+                        <option value="">--None--</option>
+                        <option value="Deliverability">Deliverability</option>
+                        <option value="Compliance">Compliance</option>
+                        <option value="Customer Success">Customer Success</option>
+                        <option value="Services">Services</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Billing">Billing</option>
+                    </select>
+                </div>
             </div>
 
              <!-- Requester Email Field -->
              <div class="container row">
                 <div class="form-group col">
-                    <label for="email">Requester Email *</label>
+                    <label for="email">Your Email Address *</label>
                     <br>
                     <input id="00N1J00000FHR5G" class="form-control" maxlength="80" name="00N1J00000FHR5G" size="20" type="text" placeholder="example@campaignmonitor.com" required/>
                 </div>            
 
                 <!-- Account Id field -->
                 <div class="form-group col">
-                    <label for="accountId">Account / Global ID or Hex Link</label>
+                    <label for="accountId">Account ID / Global ID or Hex Link</label>
                     <br>
                     <input id="00N1J00000GD7wX" class="form-control" maxlength="25" name="00N1J00000GD7wX" size="20" type="text" placeholder="1111111"/>
                 </div>
@@ -60,7 +82,7 @@
             <!-- Description Field -->
             <div class="form-group container">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" class="form-control" style="height:220px; resize:none"></textarea>
+                <textarea name="description" id="description" class="form-control" style="height:220px; resize:none;"></textarea>
             </div>
 
             <!-- List area for resource links before submission button. -->
@@ -84,10 +106,19 @@
             <input type ="hidden" id="subject" maxlength="80" name="subject" size="20" type="text" value="Internal Support Form Submission"/>
             <br>
 
-            <input type="hidden"  id="external" name="external" value="1" /><br>
+            <input type="hidden"  id="external" name="external" value="1" />
+            <br>
+
+            <!-- Attach File -->
+            <!-- <div class="input-group container" style="padding:20px">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div> -->
             
             <!-- Submit button-->
-            <input type="submit" name="submit" id="submit" class="container btn btn-primary" onclick = "appendSubmitter();checkAccountId()" style="background-color:#FF644B; border-color: white">
+            <input type="submit" name="submit" id="submit" class="container btn btn-primary" onclick = "appendSubmitter();checkAccountId()" style="background-color:#FF644B; border-color: white; border-radius:40px; height:40px">
         </div>
         
     </form>

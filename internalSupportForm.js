@@ -1,4 +1,4 @@
-// Z.S. 3/13/19
+// Z.S. 5/30/19
 // Selector variables declared for record type selected, description content area, resource content area, and list elements.
 
 var option = $("#recordType option:selected");
@@ -51,7 +51,7 @@ $('#recordType').change(function() {
         rc.setAttribute("href", "https://help.campaignmonitor.com/")
 
         // Update description field with CM relevant questions
-        description.value = "- Who should we follow up with (you or the customer): \n- Customer Name\n- Customer Email Address:\n- Your Department: \n- Description of Issue:";
+        description.value = "- Who should we follow up with (you or the customer): \n- Customer Name\n- Customer Email Address:\n- Description of Issue:";
 
     // If Emma is selected in recordType, change description and alter resource link 2.
     }else if(option.value === "0121J000000yZ1A"){
@@ -72,7 +72,7 @@ $('#recordType').change(function() {
         rc.setAttribute("href", "https://support.e2ma.net/")
         
         // Update description field with Emma relevant questions
-        description.value = "- Who should we follow up with (you or the customer): \n- Your Department:\n- Customer email address: \n- Sub Account ID (where applicable): \n- Description of Issue:";
+        description.value = "- Who should we follow up with (you or the customer):\n- Customer email address: \n- Sub Account ID (where applicable): \n- Description of Issue:";
         description.prepend("\n");
         
     // If nothing is selected or "--None--", hide resource list and empty description field.
