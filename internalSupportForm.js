@@ -19,10 +19,6 @@ function appendSubmitter(){
     description.value = "\n" + description.value + "\n- Submitter: " + requester.value;
 }
 
-function productReset(){
-    option.value = "--None--";
-}
-
 function checkAccountId(){
 
     if(accountId.value === ""){
@@ -72,7 +68,7 @@ $('#recordType').change(function() {
         rc.setAttribute("href", "https://support.e2ma.net/")
         
         // Update description field with Emma relevant questions
-        description.value = "- Who should we follow up with (you or the customer):\n- Customer email address: \n- Sub Account ID (where applicable): \n- Description of Issue:";
+        description.value = "- Who should we follow up with (you or the customer):\n- Sub Account ID (where applicable):\n- Customer email address: \n- Description of Issue:";
         description.prepend("\n");
         
     // If nothing is selected or "--None--", hide resource list and empty description field.

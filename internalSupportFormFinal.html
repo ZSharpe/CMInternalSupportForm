@@ -11,13 +11,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
-        .form-control {
-        display: inline-block !important; }
+        .form-control {display: inline-block !important; }
     </style>
 
 </head>
 
-<body onload="productReset()">
+<body>
 
     <h1 class="container" style="margin-bottom: 10px; align-content:center; font-family: roboto, helvetica">Campaign Monitor Internal Support Form</h1>
 
@@ -29,7 +28,6 @@
 
             <input type=hidden name="orgid" value="00Do0000000eE9F" class="form-control">
             <input type=hidden name="retURL" id="redirect" value="https://myemma.com">
- 
 
             <!-- SF Debugging inputs -->
             <!-- <input type="hidden" name="debug" value=1> 
@@ -38,8 +36,8 @@
             <div class="container row" style="padding-bottom:20px">
                 <!-- Choose which product to receive support for -->
                 <div class="container col">
-                    <label for="recordType">What Product? *</label>
-                    <select  id="recordType" name="recordType" class="form-control">
+                    <label for="recordType">Product *</label>
+                    <select  id="recordType" name="recordType" class="form-control" required>
                         <option value="">--None--</option>
                         <option value="012o00000016Bio">Campaign Monitor</option>
                         <option value="0121J000000yZ1A">Emma</option>
@@ -47,10 +45,10 @@
                     <br>
                 </div>
 
-                <!-- Team Picker -->
+                <!-- Choose which team you're requesting from -->
                 <div class="container col">
                     <label for="recordType">Your Team *</label>
-                    <select id="team" name="00N1J00000FKnXX" title="Emma Team" class="form-control">
+                    <select id="team" name="00N1J00000FKnXX" title="Emma Team" class="form-control" required>
                         <option value="">--None--</option>
                         <option value="Deliverability">Deliverability</option>
                         <option value="Compliance">Compliance</option>
@@ -75,7 +73,7 @@
                 <div class="form-group col">
                     <label for="accountId">Account ID / Global ID or Hex Link</label>
                     <br>
-                    <input id="00N1J00000GD7wX" class="form-control" maxlength="25" name="00N1J00000GD7wX" size="20" type="text" placeholder="1111111"/>
+                    <input id="00N1J00000GD7wX" class="form-control" maxlength="200" name="00N1J00000GD7wX" size="20" type="text" placeholder="1111111"/>
                 </div>
             </div>
 
